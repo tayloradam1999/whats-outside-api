@@ -1,6 +1,4 @@
 # whats-outside-api
-
-## Challenge
 There is one rule that must be followed… your application must follow the theme, “What’s Outside?”. You and your team are free to interpret that in any way you see fit (keep it Safe For Work, though)!
 
 ## Project Proposal
