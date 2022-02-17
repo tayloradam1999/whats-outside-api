@@ -3,7 +3,7 @@ const app = express();
 const bcrypt = require('bcrypt');
 
 app.use(express.json());
-app.listen(3000);
+app.listen(3000, () => console.log('Server started on port 3000'));
 
 // Test users for login, only other users that will have authenticity
 // are users that were previously created during testing.
@@ -33,10 +33,11 @@ app.post('/users', async (req, res) => {
 			name: req.body.name,
 			password: hashedPassword
 		};
+		if (!user.name || !user.password) throw new Error;
 		users.push(user);
 		res.status(201).send(user);
 	} catch {
-		res.status(500).send({ error: 'Internal server error' });
+		res.status(500).send({ error: 'Could not create user' });
 	}
 });
 
