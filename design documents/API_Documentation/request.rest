@@ -1,6 +1,9 @@
 GET http://localhost:3000/users
+
 ### 3 test users to test authenticity - stored in a const in server.js instead of in the database because this application will only be tested locally. No future users will be created.
-^
+
+|
+
 POST http://localhost:3000/users
 Content-Type: application/json
 
@@ -8,8 +11,11 @@ Content-Type: application/json
   "name": "Adam",
   "password": "password"
 }
+
 ### Endpoint that posts a new user with request body containing a name and password (Used strictly for testing)
-^
+
+|
+
 POST http://localhost:3000/users/login
 Content-Type: application/json
 
@@ -19,7 +25,9 @@ Content-Type: application/json
 }
 
 ### Attempt to loginc with an invalid password. Without valid password, user cannot login and will not have access to the API.
-^
+
+|
+
 POST http://localhost:3000/users/login
 Content-Type: application/json
 
@@ -29,3 +37,4 @@ Content-Type: application/json
 }
 
 ### Attempting to login with credentials that are valid. If login successful, user can access API. Returns the user JSON object instead of redirection.
+|
