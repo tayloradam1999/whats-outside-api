@@ -37,4 +37,3 @@ Content-Type: application/json
 }
 
 ### Attempting to login with credentials that are valid. If login successful, user can access API. Returns the user JSON object instead of redirection.
-|
