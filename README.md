@@ -4,13 +4,13 @@ Using all of the skills you’ve developed over the last two trimesters, you are
 There is only rule that must be followed… your application must follow the theme, ```“What’s Outside?”.``` You and your team are free to interpret that in any way you see fit (keep it Safe For Work, though)!
 
 ## Project Proposal
-- Writeups of the design
+- **Writeups of the design**
   - What is it you are going to build and how does it fit the theme?
   - What tools will be used?
   - How long will development of each part of the application take?
-- API documentation
-- UML (or similar) Database Documentation
-- Wireframes for any implemented UI elements of the application
+- **API documentation**
+- **UML** (or similar) **Database Documentation**
+- **Wireframes** for any implemented UI elements of the application
 
 ## The Backend
 - **Setup Database**
