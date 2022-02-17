@@ -7,7 +7,7 @@ There is only rule that must be followed… your application must follow the the
 - Writeups of the design
   - What is it you are going to build and how does it fit the theme?
   - What tools will be used?
-  - How long long will development of each part of the application take?
+  - How long will development of each part of the application take?
 - API documentation
 - UML (or similar) Database Documentation
 - Wireframes for any implemented UI elements of the application
