@@ -1,5 +1,5 @@
 # whats-outside-api
-Using all of the skills you’ve developed over the last two trimesters, you are now tasked with creating your very own **Custom API from scratch!** This includes creating your own database with custom scripts that setup the database, creating custom datasets to populate your database with, handling the ETL process, creating the API (required: user auth, pagination, caching, queuing systems VS web sockets), and creating the frontend.
+Using all of the skills you’ve developed over the last two trimesters, you are now tasked with creating your very own ***Custom API from scratch!*** This includes creating your own database with custom scripts that setup the database, creating custom datasets to populate your database with, handling the ETL process, creating the API (required: user auth, pagination, caching, queuing systems VS web sockets), and creating the frontend.
 
 There is only rule that must be followed… your application must follow the theme, ```“What’s Outside?”.``` You and your team are free to interpret that in any way you see fit (keep it Safe For Work, though)!
 
