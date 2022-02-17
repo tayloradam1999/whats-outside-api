@@ -1,0 +1,30 @@
+{
+  "name": "whats-outside-api",
+  "version": "1.0.0",
+  "description": "Using all of the skills you’ve developed over the last two trimesters, you are now tasked with creating your very own ***Custom API from scratch!*** This includes creating your own database with custom scripts that setup the database, creating custom datasets to populate your database with, handling the ETL process, creating the API (required: user auth, pagination, caching, queuing systems VS web sockets), and creating the frontend.",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tayloradam1999/whats-outside-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tayloradam1999/whats-outside-api/issues"
+  },
+  "homepage": "https://github.com/tayloradam1999/whats-outside-api#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
