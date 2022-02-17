@@ -1,6 +1,6 @@
 GET http://localhost:3000/users
 
-### 3 test users to test authenticity - stored in a const in server.js instead of in the database because this application will only be tested locally. No future users will be created.
+### 3 test users to test authorization - stored in a const in server.js instead of in the database because this application will only be tested locally. No future users will be created.
 
 
 POST http://localhost:3000/users
