@@ -1,0 +1,133 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  font-size: 3.6rem;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.text1 {
+	white-space: nowrap;
+	overflow: hidden;    
+	font-family: 'Source Code Pro', monospace;  
+	font-size: 6.4rem;
+	color: rgba(255,255,255,.70);
+	margin-bottom: 13rem;
+  }
+  
+  /* Animation */
+  .text1 {
+	animation: animated-text 2.5s steps(30,end) 1s 1 normal both;
+  }
+  
+  /* text animation */
+  
+  @keyframes animated-text{
+	from{width: 0;}
+	to{width: 1000px;}
+  }
+
+.text2 {
+	white-space: nowrap;
+	overflow: hidden;    
+	font-family: 'Source Code Pro', monospace;  
+	font-size: 10rem;
+	color: rgba(255,255,255,10);
+	margin-top: 11rem;
+  }
+  
+  /* Animation */
+  .text2 {
+	animation: animated-text 3s steps(35,end) 1s 1 normal both;
+	animation-delay: 3.5s;
+  }
+  
+  /* text animation */
+  
+  @keyframes animated-text{
+	from{width: 0;}
+	to{width: 1500px;}
+  }
+
+.text3 {
+	margin-top: 0.5rem !important;
+	margin-bottom: 0 !important;
+	font-size: 0.9rem;
+	background: linear-gradient(to right, #fc5c7d, #6a82fb);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+	opacity: 0;
+	animation-name: fadeInText;
+	animation-duration: 3s;
+	animation-delay: 6.5s;
+	animation-fill-mode: forwards;
+	}
+
+	@keyframes fadeInText {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+.getStarted {
+	background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+	border: 2px solid rgba(255,255,255,.70) !important;
+	color: rgba(255,255,255,.70) !important;
+	padding: 1rem 2rem;
+	font-size: 1.6rem !important;
+	font-size: 2rem;
+	height: 6rem;
+	width: 18rem;
+	opacity: 0;
+	animation-name: fadeInButton;
+	/* animation waits 7 seconds then runs, stays on page forever after */
+	animation-duration: 3s;
+	animation-delay: 6.5s;
+	animation-fill-mode: forwards;
+	}
+
+	@keyframes fadeInButton {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+.Button:hover {
+	animation-name: buttonExpand;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	}
+
+	@keyframes buttonExpand {
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(1.1);
+		}
+	}
+
+.linkedInIcon {
+	width: 2.5rem;
+	height: 2.5rem;
+	margin-bottom: -0.4rem;
+	color: #6a82fb
+}
