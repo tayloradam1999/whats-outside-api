@@ -44,3 +44,19 @@ Content-Type: application/json
 }
 
 ### Attempting to login with credentials that are valid. If login successful, user can access API. Returns the user JSON object instead of redirection.
+
+
+GET http://localhost:3000/cities
+
+### Returns all cities in the database.
+
+
+GET http://localhost:3000/cities/:city
+Content-Type: application/json
+
+{
+  "city": "dallas_tx"
+}
+
+### Returns a city by name. 
+
