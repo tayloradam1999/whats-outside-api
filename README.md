@@ -26,19 +26,19 @@ There is only rule that must be followed… your application must follow the the
 - **Create API**
   - I have chosen ```Express``` for this application
   - **API must do the following:**
-    - Authenticate users
+    - [Authenticate users](https://www.youtube.com/watch?v=Ud5xKCYQTjM)
 	- Allow for pagination of data
 	- Allow for caching of data to reduce hits to database
   - **API must also implement ONE of the following:**
     - Queueing systems
-	- Web Sockets
+	- [Web Sockets](https://www.youtube.com/watch?v=ZKEqqIO7n-k)
   
 ## The Frontend
 - Refer to wireframe for UI elements
   - **Page 1:**
     - Get started button to handle user authentication before allowing user to access the application
       - If not authenticated, user must be given an error and not allowed access to next page (where the application is)
-	  - If authenticated, user can access the next page (where the application is)
+	  - If authenticated, user can access the next page
   - **Page 2:**
     - 4 Cities to query
 	  - User has ability to choose which city to query
