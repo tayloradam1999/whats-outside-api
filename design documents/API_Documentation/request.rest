@@ -60,3 +60,13 @@ Content-Type: application/json
 
 ### Returns a city by name. 
 
+
+GET http://localhost:3000/cities/:city/:filter
+Content-Type: application/json
+
+{
+  "city": "dallas_tx",
+  "filter": "nature"
+}
+
+# Returns a city by name and filter.

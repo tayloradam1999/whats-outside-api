@@ -30,6 +30,19 @@ class DBClient {
 	getCityByName(city) {
 		return this.client.query(`SELECT * FROM cities WHERE city = '${city}'`);
 	}
+
+	// get city specified by name and filter
+	//
+	// tried for hours to get this to work with an array of filters
+	// but postgresql doesn't seem to like it, json parsing errors galore.
+	//
+	// once our filter webpage has buttons, we can implement
+	// on press => add name of button to array
+	// and then use that array to query the database
+	// however many times we need. *HOPEFULLY*
+	getCityWithFilter(city, filter) {
+		return this.client.query(`SELECT ${filter} FROM cities WHERE city = '${city}'`);
+	}
 }
 
 // export db client to use in API

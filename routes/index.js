@@ -21,6 +21,8 @@ const router = (app) => {
 	paths.get('/cities', CitiesController.getCities);
 	// GET '/cities/:city'
 	paths.get('/cities/:city', CitiesController.getCityByName);
+	// GET '/cities/:city/:filter'
+	paths.get('/cities/:city/:filter', CitiesController.getCityWithFilter);
 };
 
 module.exports = router;
