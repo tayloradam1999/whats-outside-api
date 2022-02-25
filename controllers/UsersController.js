@@ -1,5 +1,6 @@
-const bcrypt = require('bcrypt');
-const db = require('../utils/db');
+import bcrypt from 'bcrypt';
+// import objects from react-app/src/App.js
+
 
 // not storing users in database as this application will only
 // ever be used locally for testing.
@@ -63,4 +64,4 @@ class UsersController {
 	}
 }
 
-module.exports = UsersController;
+export default UsersController;

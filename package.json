@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Using all of the skills you’ve developed over the last two trimesters, you are now tasked with creating your very own ***Custom API from scratch!*** This includes creating your own database with custom scripts that setup the database, creating custom datasets to populate your database with, handling the ETL process, creating the API (required: user auth, pagination, caching, queuing systems VS web sockets), and creating the frontend.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "devStart": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"

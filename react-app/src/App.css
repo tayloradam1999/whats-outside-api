@@ -1,17 +1,24 @@
+html {
+	scroll-behavior: smooth;
+	font-family: 'Source Code Pro', monospace; 
+}
+
 .App {
-  text-align: center;
+	text-align: center;
+	min-height: 200vh;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 220vh; */
   display: flex;
   position: relative;
   flex-direction: column;
-  align-items:center;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
   font-size: 3.6rem;
   color: white;
+  max-height: 120vh;
 }
 
 .App-link {
@@ -42,7 +49,6 @@
 .text2 {
 	white-space: nowrap;
 	overflow: hidden;    
-	font-family: 'Source Code Pro', monospace;  
 	font-size: 10rem;
 	color: rgba(255,255,255,10);
 	margin-top: 11rem;
@@ -76,23 +82,21 @@
 	}
 
 	@keyframes fadeInText {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
+		from {opacity: 0;}
+		to {opacity: 1;}
 	}
 
 .getStarted {
 	background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
 	border: 2px solid rgba(255,255,255,.70) !important;
+	border-radius: 2rem;
 	color: rgba(255,255,255,.70) !important;
 	padding: 1rem 2rem;
 	font-size: 1.6rem !important;
 	font-size: 2rem;
 	height: 6rem;
 	width: 18rem;
+	cursor: default;
 	opacity: 0;
 	animation-name: fadeInButton;
 	/* animation waits 7 seconds then runs, stays on page forever after */
@@ -102,12 +106,8 @@
 	}
 
 	@keyframes fadeInButton {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
+		from {opacity: 0;}
+		to {opacity: 1;}
 	}
 
 .Button:hover {
@@ -117,12 +117,8 @@
 	}
 
 	@keyframes buttonExpand {
-		from {
-			transform: scale(1);
-		}
-		to {
-			transform: scale(1.1);
-		}
+		from {transform: scale(1);}
+		to {transform: scale(1.1);}
 	}
 
 .linkedInIcon {
@@ -130,4 +126,158 @@
 	height: 2.5rem;
 	margin-bottom: -0.4rem;
 	color: #6a82fb
+}
+
+
+/* extend is just used to give space between header and body buttonRow */
+.extend1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	margin-top: 2rem;
+}
+
+.extend1 h1 {
+	background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+.App-body {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: #d3d3d3;
+	min-height: 100vh;
+}
+
+.buttonRow1 {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 90%;
+	margin-top: 2rem;
+}
+
+
+.matButton1, .matButton2, .matButton3, .matButton4 {
+	font-size: 1.6rem;
+	font-family: 'Source Code Pro', monospace;
+	color: rgba(255,255,255,.70);
+	/* background-image: linear-gradient(to right, #fc5c7d, #6a82fb); */
+	border: 2px solid rgba(255,255,255,.70) !important;
+	border-radius: 1rem;
+	padding: 1rem 2rem;
+	height: 4.4rem !important;
+	width: 18rem;
+	opacity: 1;
+	background-color: #d3d3d3;
+	font-style: italic !important;
+	cursor: default;
+}
+
+.matButton1Selected, .matButton2Selected, .matButton3Selected, .matButton4Selected {
+	font-size: 1.6rem;
+	font-family: 'Source Code Pro', monospace;
+	color: rgba(255,255,255,.70);
+	background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+	border: 2px solid rgba(255,255,255,.70) !important;
+	border-radius: 1rem;
+	padding: 1rem 2rem;
+	height: 4.4rem !important;
+	width: 18rem;
+	opacity: 1;
+	font-style: bold !important;
+	cursor: default;
+}
+
+.extend2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	margin-top: 2rem;
+}
+
+.extend2 h1 {
+	background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+.buttonRow2 {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+	margin-top: 2rem;
+}
+
+.matButton5, .matButton6, .matButton7, .matButton8, .matButton9 {
+	font-size: 1.6rem;
+	font-family: 'Source Code Pro', monospace;
+	color: rgba(255,255,255,.70);
+	/* background-image: linear-gradient(to right, #fc5c7d, #6a82fb); */
+	border: 2px solid rgba(255,255,255,.70) !important;
+	background-color: #d3d3d3;
+	border-radius: 1rem;
+	padding: 1rem 2rem;
+	height: 4.4rem !important;
+	width: 18rem;
+	opacity: 1;
+}
+
+.matButton5Selected, .matButton6Selected, .matButton7Selected, .matButton8Selected, .matButton9Selected {
+	font-size: 1.6rem;
+	font-family: 'Source Code Pro', monospace;
+	color: rgba(255,255,255,.70);
+	background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+	border: 2px solid rgba(255,255,255,.70) !important;
+	border-radius: 1rem;
+	padding: 1rem 2rem;
+	height: 4.4rem !important;
+	width: 18rem;
+	opacity: 1;
+	font-style: bold !important;
+	cursor: default;
+}
+
+.extend3 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	margin-top: 2rem;
+}
+
+.submitRow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.submitRow p {
+	width: 15%;
+}
+
+.matButtonSubmit {
+	margin-left: 2rem;
+	font-size: 1.6rem;
+	font-family: 'Source Code Pro', monospace;
+	color: rgba(255,255,255,.70);
+	background-color: green;
+	border: 2px solid rgba(255,255,255,.70) !important;
+	border-radius: 1rem;
+	padding: 1rem 2rem;
+	height: 4.4rem !important;
+	width: 8rem !important;
+	opacity: 1;
 }

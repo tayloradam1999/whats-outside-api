@@ -1,4 +1,4 @@
-const db = require('../utils/db');
+import db from '../utils/db.js';
 
 class CitiesController {
 	static getCities(req, res) {
@@ -21,4 +21,4 @@ class CitiesController {
 	}
 }
 
-module.exports = CitiesController;
+export default CitiesController;

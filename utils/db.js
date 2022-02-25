@@ -1,5 +1,5 @@
 // create class that will be used to connect to the database
-const { Client } = require('pg');
+import pg from 'pg';
 
 const host = 'localhost';
 const port = 5432;
@@ -11,7 +11,7 @@ const database = 'postgres';
 class DBClient {
 	constructor() {
 		// creates a new client and assigns it to this.client
-		this.client = new Client({
+		this.client = new pg.Client({
 			host,
 			port,
 			user,
@@ -47,4 +47,4 @@ class DBClient {
 
 // export db client to use in API
 const db = new DBClient();
-module.exports = db;
+export default db;

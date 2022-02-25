@@ -1,8 +1,8 @@
-const express = require('express');
+import express from 'express';
 
 // import controllers
-const UsersController = require('../controllers/UsersController');
-const CitiesController = require('../controllers/CitiesController');
+import UsersController from '../controllers/UsersController.js';
+import CitiesController from '../controllers/CitiesController.js';
 
 
 // router setup
@@ -25,4 +25,5 @@ const router = (app) => {
 	paths.get('/cities/:city/:filter', CitiesController.getCityWithFilter);
 };
 
-module.exports = router;
+
+export default router;
