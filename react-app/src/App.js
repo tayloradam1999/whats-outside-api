@@ -26,6 +26,7 @@ class App extends Component {
 
   // if you're looking at this, i'm sorry.
   // using react before actually learning it looks like... this.
+  // next trimester is going to be a lot of fun.
   selectButton1 = () => {
     if (document.getElementById("button1").className === "matButton1Selected") {
       document.getElementById("button1").className = "matButton1";
@@ -66,33 +67,27 @@ class App extends Component {
     if (document.getElementById("button5").className === "matButton5Selected") {
       document.getElementById("button5").className = "matButton5";
       this.filters = this.filters.filter(filter => filter !== "nature");
-      console.log(this.filters);
     } else {
       document.getElementById("button5").className = "matButton5Selected";
       this.filters.push("nature");
-      console.log(this.filters);
     }
   }
   selectButton6 = () => {
     if (document.getElementById("button6").className === "matButton6Selected") {
       document.getElementById("button6").className = "matButton6";
       this.filters = this.filters.filter(filter => filter !== "parks");
-      console.log(this.filters);
     } else {
       document.getElementById("button6").className = "matButton6Selected";
       this.filters.push("parks");
-      console.log(this.filters);
     }
   }
   selectButton7 = () => {
     if (document.getElementById("button7").className === "matButton7Selected") {
       document.getElementById("button7").className = "matButton7";
       this.filters = this.filters.filter(filter => filter !== "museums");
-      console.log(this.filters);
     } else {
       document.getElementById("button7").className = "matButton7Selected";
       this.filters.push("museums");
-      console.log(this.filters);
     }
   }
   selectButton8 = () => {
@@ -134,6 +129,8 @@ class App extends Component {
             <div class="extend1"><h1 class="bodytext1">Choose From the Following Cities</h1></div>
             <div class="buttonRow1">
               <div class="button1">
+				{/* again, i'm sorry.
+				i know the button rows should be components.*/}
                 <Button variant="text" className="matButton1" id="button1" onClick={this.selectButton1}>DALLAS_TX</Button>
               </div>
               <div class="button2">
