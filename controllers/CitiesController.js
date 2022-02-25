@@ -1,4 +1,6 @@
 import db from '../utils/db.js';
+import App from '../react-app/src/App.js';
+
 
 class CitiesController {
 	static getCities(req, res) {
@@ -18,6 +20,13 @@ class CitiesController {
 		db.getCityWithFilter(req.body.city, req.body.filter)
 		.then(city => res.send(city.rows[0]))
 		.catch(err => res.status(500).send({ error: 'Internal server error' }));
+	}
+
+	static frontEnd_Submit(req, res) {
+		// pull in cities and filters from App.js
+		const cities = App.state.cities;
+		const filters = App.state.filters;
+		res.send({ cities, filters });
 	}
 }
 

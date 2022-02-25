@@ -257,6 +257,12 @@ html {
 	margin-top: 2rem;
 }
 
+.extend3 h1 {
+	background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
 .submitRow {
 	display: flex;
 	align-items: center;

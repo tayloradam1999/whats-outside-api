@@ -36,10 +36,14 @@ class DBClient {
 	// tried for hours to get this to work with an array of filters
 	// but postgresql doesn't seem to like it, json parsing errors galore.
 	//
-	// once our filter webpage has buttons, we can implement
+	// once our app-body has buttons, we can implement
 	// on press => add name of button to array
 	// and then use that array to query the database
 	// however many times we need. *HOPEFULLY*
+	//
+	// i came back 2 days later and that's exactly how it's working now ^_^
+	// not sure how to use those arrays to query, but this endpoint
+	// works for the API.
 	getCityWithFilter(city, filter) {
 		return this.client.query(`SELECT ${filter} FROM cities WHERE city = '${city}'`);
 	}
