@@ -7,9 +7,13 @@ import StylesProvider from '@material-ui/styles/StylesProvider';
 
 class App extends Component {
 	cities = []; filters = [];
+	// since our API cannot import React, we need to use the window.fetch() function to make a call to our API
+	// sadly, i was never able to get [filters] to be an array of strings when passed as req.body,
+	// so as of now, only one city and one filter can be selected at a time using 'City' and 'Filter'.
+	City = ""; Filter = "";
 
 	callSubmitButton = async () => {
-		const response = await fetch(`/frontEnd_Submit`, {
+		const response = await fetch(`/cities/:${this.City}/:${this.Filter}`, {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json'
@@ -26,83 +30,82 @@ class App extends Component {
 	selectButton1 = () => {
 		if (document.getElementById("button1").className === "matButton1Selected") {
 			document.getElementById("button1").className = "matButton1";
-			this.cities = this.cities.filter(city => city !== "dallas_tx");
-		} else {
+			// remove string
+			this.City = ""
 			document.getElementById("button1").className = "matButton1Selected";
-			this.cities.push("dallas_tx");
-			console.log(this.cities);
+			this.City = "dallas_tx";
 		}
 	}
 	selectButton2 = () => {
 		if (document.getElementById("button2").className === "matButton2Selected") {
 			document.getElementById("button2").className = "matButton2";
-			this.cities = this.cities.filter(city => city !== "tulsa_ok");
+			this.City = ""
 		} else {
 			document.getElementById("button2").className = "matButton2Selected";
-			this.cities.push("tulsa_ok");
+			this.City = "tulsa_ok";
 		}
 	}
 	selectButton3 = () => {
 		if (document.getElementById("button3").className === "matButton3Selected") {
 			document.getElementById("button3").className = "matButton3";
-			this.cities = this.cities.filter(city => city !== "valdez_ak");
+			this.City = ""
 		} else {
 			document.getElementById("button3").className = "matButton3Selected";
-			this.cities.push("valdez_ak");
+			this.City = "valdez_ak";
 		}
 	}
 	selectButton4 = () => {
 		if (document.getElementById("button4").className === "matButton4Selected") {
 			document.getElementById("button4").className = "matButton4";
-			this.cities = this.cities.filter(city => city !== "palm_springs_ca");
+			this.City = ""
 		} else {
 			document.getElementById("button4").className = "matButton4Selected";
-			this.cities.push("palm_springs_ca");
+			this.City = "palm_springs_ca";
 		}
 	}
 	selectButton5 = () => {
 		if (document.getElementById("button5").className === "matButton5Selected") {
 			document.getElementById("button5").className = "matButton5";
-			this.filters = this.filters.filter(filter => filter !== "nature");
+			this.Filter = "";
 		} else {
 			document.getElementById("button5").className = "matButton5Selected";
-			this.filters.push("nature");
+			this.Filter = "nature";
 		}
 	}
 	selectButton6 = () => {
 		if (document.getElementById("button6").className === "matButton6Selected") {
 			document.getElementById("button6").className = "matButton6";
-			this.filters = this.filters.filter(filter => filter !== "parks");
+			this.Filter = "";
 		} else {
 			document.getElementById("button6").className = "matButton6Selected";
-			this.filters.push("parks");
+			this.Filter = "parks";
 		}
 	}
 	selectButton7 = () => {
 		if (document.getElementById("button7").className === "matButton7Selected") {
 			document.getElementById("button7").className = "matButton7";
-			this.filters = this.filters.filter(filter => filter !== "museums");
+			this.Filter = "";
 		} else {
 			document.getElementById("button7").className = "matButton7Selected";
-			this.filters.push("museums");
+			this.Filter = "museums";
 		}
 	}
 	selectButton8 = () => {
 		if (document.getElementById("button8").className === "matButton8Selected") {
 			document.getElementById("button8").className = "matButton8";
-			this.filters = this.filters.filter(filter => filter !== "landmarks");
+			this.Filter = "";
 		} else {
 			document.getElementById("button8").className = "matButton8Selected";
-			this.filters.push("landmarks");
+			this.Filter = "landmarks";
 		}
 	}
 	selectButton9 = () => {
 		if (document.getElementById("button9").className === "matButton9Selected") {
 			document.getElementById("button9").className = "matButton9";
-			this.filters = this.filters.filter(filter => filter !== "transportation");
+			this.Filter = "";
 		} else {
 			document.getElementById("button9").className = "matButton9Selected";
-			this.filters.push("transportation");
+			this.Filter = "transportation";
 		}
 	}
 
