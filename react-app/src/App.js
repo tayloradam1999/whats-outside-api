@@ -5,13 +5,10 @@ import Button from '@material-ui/core/Button';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import StylesProvider from '@material-ui/styles/StylesProvider';
 
-let cities = [];
-let filters = [];
-
 class App extends Component {
   state = {
     data: null
-  };
+  }; cities = []; filters = [];
 
   componentDidMount() {
     this.callBackendAPI()
@@ -32,88 +29,88 @@ class App extends Component {
   selectButton1 = () => {
     if (document.getElementById("button1").className === "matButton1Selected") {
       document.getElementById("button1").className = "matButton1";
-      cities = cities.filter(city => city !== "dallas_tx");
+      this.cities = this.cities.filter(city => city !== "dallas_tx");
     } else {
       document.getElementById("button1").className = "matButton1Selected";
-      cities.push("dallas_tx");
+      this.cities.push("dallas_tx");
     }
   }
   selectButton2 = () => {
     if (document.getElementById("button2").className === "matButton2Selected") {
       document.getElementById("button2").className = "matButton2";
-      cities = cities.filter(city => city !== "tulsa_ok");
+      this.cities = this.cities.filter(city => city !== "tulsa_ok");
     } else {
       document.getElementById("button2").className = "matButton2Selected";
-      cities.push("tulsa_ok");
+      this.cities.push("tulsa_ok");
     }
   }
   selectButton3 = () => {
     if (document.getElementById("button3").className === "matButton3Selected") {
       document.getElementById("button3").className = "matButton3";
-      cities = cities.filter(city => city !== "valdez_ak");
+      this.cities = this.cities.filter(city => city !== "valdez_ak");
     } else {
       document.getElementById("button3").className = "matButton3Selected";
-      cities.push("valdez_ak");
+      this.cities.push("valdez_ak");
     }
   }
   selectButton4 = () => {
     if (document.getElementById("button4").className === "matButton4Selected") {
       document.getElementById("button4").className = "matButton4";
-      cities = cities.filter(city => city !== "palm_springs_ca");
+      this.cities = this.cities.filter(city => city !== "palm_springs_ca");
     } else {
       document.getElementById("button4").className = "matButton4Selected";
-      cities.push("palm_springs_ca");
+      this.cities.push("palm_springs_ca");
     }
   }
   selectButton5 = () => {
     if (document.getElementById("button5").className === "matButton5Selected") {
       document.getElementById("button5").className = "matButton5";
-      filters = filters.filter(filter => filter !== "nature");
-      console.log(filters);
+      this.filters = this.filters.filter(filter => filter !== "nature");
+      console.log(this.filters);
     } else {
       document.getElementById("button5").className = "matButton5Selected";
-      filters.push("nature");
-      console.log(filters);
+      this.filters.push("nature");
+      console.log(this.filters);
     }
   }
   selectButton6 = () => {
     if (document.getElementById("button6").className === "matButton6Selected") {
       document.getElementById("button6").className = "matButton6";
-      filters = filters.filter(filter => filter !== "parks");
-      console.log(filters);
+      this.filters = this.filters.filter(filter => filter !== "parks");
+      console.log(this.filters);
     } else {
       document.getElementById("button6").className = "matButton6Selected";
-      filters.push("parks");
-      console.log(filters);
+      this.filters.push("parks");
+      console.log(this.filters);
     }
   }
   selectButton7 = () => {
     if (document.getElementById("button7").className === "matButton7Selected") {
       document.getElementById("button7").className = "matButton7";
-      filters = filters.filter(filter => filter !== "museums");
-      console.log(filters);
+      this.filters = this.filters.filter(filter => filter !== "museums");
+      console.log(this.filters);
     } else {
       document.getElementById("button7").className = "matButton7Selected";
-      filters.push("museums");
-      console.log(filters);
+      this.filters.push("museums");
+      console.log(this.filters);
     }
   }
   selectButton8 = () => {
     if (document.getElementById("button8").className === "matButton8Selected") {
       document.getElementById("button8").className = "matButton8";
-      filters = filters.filter(filter => filter !== "landmarks");
+      this.filters = this.filters.filter(filter => filter !== "landmarks");
     } else {
       document.getElementById("button8").className = "matButton8Selected";
-      filters.push("landmarks");
+      this.filters.push("landmarks");
     }
   }
   selectButton9 = () => {
     if (document.getElementById("button9").className === "matButton9Selected") {
       document.getElementById("button9").className = "matButton9";
-      filters = filters.filter(filter => filter !== "transportation");
+      this.filters = this.filters.filter(filter => filter !== "transportation");
     } else {
       document.getElementById("button9").className = "matButton9Selected";
-      filters.push("transportation");
+      this.filters.push("transportation");
     }
   }
 

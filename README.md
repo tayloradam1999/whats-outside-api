@@ -34,23 +34,16 @@ There is only rule that must be followed… your application must follow the the
 	- [Web Sockets](https://www.youtube.com/watch?v=ZKEqqIO7n-k)
   
 ## The Frontend
-- Refer to wireframe for UI elements
-  - **Page 1:**
-    - Get started button to handle user authentication before allowing user to access the application
-      - If not authenticated, user must be given an error and not allowed access to next page (where the application is)
-	  - If authenticated, user can access the next page
-  - **Page 2:**
-    - 4 Cities to query
-	  - User has ability to choose which city to query
-	    - Can query multiple cities at once
-	  - User has options of filtering with the following:
-	    - Nature
-		- Parks
-		- Museums
-		- Landmarks
-		- Transportation
-	  - Result Per Page? Option for pagination.
-	  - Submit button to submit query
-	    - Allow for caching of data to reduce hits to database
-	- Results are displayed below filtering options and submit button.
+- I have chosen ```React``` and ```Material UI``` for this application
+  - **App-header**
+    - Scrolling text welcoming user to application
+    - Get started Material UI button
+	  - Button should scroll user down to app-body
+  - **App-body**
+    - A row of buttons indicating cities to query
+	  - User can choose 0, 1, or many cities
+	- A 2nd row of buttons indicating filters to query with
+	  - User can choose 0, 1, or many filters
+	- Output of query results
+	  - `work in progress, may output to page or console`
 
