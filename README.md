@@ -5,7 +5,7 @@ There is only rule that must be followed… your application must follow the the
 
 ## Production
 While developing this application, I encountered a problem where ```react-app``` was restricted to ```import```,
-and my express server was restricted to ```require```. I know of ```babel``` and it's capabilities, but due to the deadline
+and my ```express server``` was restricted to ```require```. I know of ```babel``` and it's capabilities, but due to the deadline
 of the project and my lack of experience with it, I decided to make my own approach instead.
 
 **To run the application as intended, follow the instructions below:**
