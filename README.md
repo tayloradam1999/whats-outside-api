@@ -16,13 +16,13 @@ of the project and my lack of experience with it, I decided to make my own appro
 	- (You can rename this directory to whatever makes you think '*express server*, not *react app*!')
 - Setup the Database
   - Run the script that installs postgresql and creates the database
-    - ```./scripts/installPostgreSQL
+    - ```./scripts/installPostgreSQL```
   - Run the script that creates the tables
 	- ```sudo -u postgres psql``` - Enter postgres cli
 	- ```\i scripts/setupDatabase.sql``` - Execute sql scripte
 	- ```\q``` - Quit postgres cli
   - Run the script that handles the ETL process
-    - ```Python3 ./scripts/pandasETL.py
+    - ```Python3 ./scripts/pandasETL.py```
 - Before installing any dependencies, delete ```react-app``` from the working directory
   - ```rm -rf react-app```
 - Install the dependencies for our express server
