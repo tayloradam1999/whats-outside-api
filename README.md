@@ -4,22 +4,22 @@ Using all of the skills you’ve developed over the last two trimesters, you are
 There is only rule that must be followed… your application must follow the theme, ```“What’s Outside?”.``` You and your team are free to interpret that in any way you see fit (keep it Safe For Work, though)!
 
 ## Production
-While developing this application, I encountered a problem where ```react-app``` was restricted to ```import```,
+While developing this application, I encountered a problem where my ```react-app``` was restricted to ```import```,
 and my ```express server``` was restricted to ```require```. I know of ```babel``` and it's capabilities, but due to the deadline
-of the project and my lack of experience with it, I decided to make my own approach instead.
+of the project and my lack of experience with it, I decided to take my own approach instead.
 
 **To run the application as intended, follow the instructions below:**
 - Clone the repository (This will be the working directory for ONLY our express server)
   - ```git clone https://github.com/tayloradam1999/whats-outside-api.git```
   - Move into working directory
-    - ```cd whats-outside-api``
+    - ```cd whats-outside-api```
 	- (You can rename this directory to whatever makes you think '*express server*, not *react app*!')
 - Setup the Database
   - Run the script that installs postgresql and creates the database
     - ```./scripts/installPostgreSQL```
   - Run the script that creates the tables
 	- ```sudo -u postgres psql``` - Enter postgres cli
-	- ```\i scripts/setupDatabase.sql``` - Execute sql scripte
+	- ```\i scripts/setupDatabase.sql``` - Execute sql script
 	- ```\q``` - Quit postgres cli
   - Run the script that handles the ETL process
     - ```Python3 ./scripts/pandasETL.py```
