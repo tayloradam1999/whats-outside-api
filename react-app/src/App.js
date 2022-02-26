@@ -6,23 +6,29 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import StylesProvider from '@material-ui/styles/StylesProvider';
 
 class App extends Component {
-	cities = []; filters = [];
-	// since our API cannot import React, we need to use the window.fetch() function to make a call to our API
-	// sadly, i was never able to get [filters] to be an array of strings when passed as req.body,
-	// so as of now, only one city and one filter can be selected at a time using 'City' and 'Filter'.
+	// cities = []; filters = [];
+	// Currently, our makeshift frontend query is only for one city and one filter.
+	// Frontend's query is based off req.params
+	// Work on implementing a frontend query that can be used for multiple cities and filters.
 	City = ""; Filter = "";
 
-	callSubmitButton = async () => {
-		const response = await fetch(`/cities/:${this.City}/:${this.Filter}`, {
-			method: 'GET',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-		});
-		const body = await response.json();
-		if (response.status !== 200) throw Error(body.message)
-		return body;
-  	}
+	callSubmitButton = () => {
+		// fetch '/react/:city/:filter' with City and Filter
+		fetch('/react/' + this.City + '/' + this.Filter)
+		// don't turn into json, turn into text
+			.then(response => response.text())
+			.then(data => {
+				// console.log(data);
+				// add data to resultsRow
+				console.log(data);
+				let resultsRow = document.getElementsByClassName("resultsRow");
+				// add new h1 to resultsRow
+				let newH1 = document.createElement("h1");
+				newH1.innerHTML = data;
+				resultsRow[0].appendChild(newH1);
+			})
+			.catch(err => console.log(err));
+	}
 
 	// if you're looking at this, i'm sorry.
 	// using react before actually learning it looks like... this.
@@ -32,6 +38,7 @@ class App extends Component {
 			document.getElementById("button1").className = "matButton1";
 			// remove string
 			this.City = ""
+		} else { 
 			document.getElementById("button1").className = "matButton1Selected";
 			this.City = "dallas_tx";
 		}
@@ -167,6 +174,7 @@ class App extends Component {
 							<p>Results Per Page?</p>
 							<Button variant="text" className="matButtonSubmit" id="SubmitButton" onClick={this.callSubmitButton}>Submit</Button>
 						</div>
+						<div class="resultsRow"></div>
 					</header>
 				</div >
 			</StylesProvider>

@@ -61,12 +61,23 @@ Content-Type: application/json
 ### Returns a city by name. 
 
 
-GET http://localhost:3000/cities/:city/:filter
+GET http://localhost:5000/cities/:city/:filter
 Content-Type: application/json
 
 {
-  "city": "dallas_tx",
+  "city": "tulsa_ok",
   "filter": "nature"
 }
 
 # Returns a city by name and filter.
+
+
+GET http://localhost:3000/react/:city/:filter
+Content-Type: application/json
+
+{
+  "city": "dallas_tx",
+  "filter": "transportation"
+}
+
+# Returns a city by name and filter via React.

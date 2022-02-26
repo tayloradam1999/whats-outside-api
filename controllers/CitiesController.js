@@ -16,17 +16,15 @@ class CitiesController {
 	}
 
 	static getCityWithFilter(req, res) {
-		// req.body.filter cannot be array - will only be a single string
 		db.getCityWithFilter(req.body.city, req.body.filter)
 		.then(city => res.send(city.rows[0]))
 		.catch(err => res.status(500).send({ error: 'Internal server error' }));
 	}
 
-	static frontEnd_Submit(req, res) {
-		// pull in cities and filters from App.js
-		const cities = App.state.cities;
-		const filters = App.state.filters;
-		res.send({ cities, filters });
+	static ReactgetCityWithFilter(req, res) {
+		db.ReactgetCityWithFilter(req.params.City, req.params.Filter)
+		.then(city => res.send(city.rows[0]))
+		.catch(err => res.status(500).send({ error: 'Internal server error' }));
 	}
 }
 

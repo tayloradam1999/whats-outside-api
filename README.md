@@ -3,6 +3,44 @@ Using all of the skills you’ve developed over the last two trimesters, you are
 
 There is only rule that must be followed… your application must follow the theme, ```“What’s Outside?”.``` You and your team are free to interpret that in any way you see fit (keep it Safe For Work, though)!
 
+## Production
+While developing this application, I encountered a problem where ```react-app``` was restricted to ```import```,
+and my express server was restricted to ```require```. I know of ```babel``` and it's capabilities, but due to the deadline
+of the project and my lack of experience with it, I decided to make my own approach instead.
+
+**To run the application as intended, follow the instructions below:**
+- Clone the repository (This will be the working directory for ONLY our express server)
+  - ```git clone https://github.com/tayloradam1999/whats-outside-api.git```
+  - Move into working directory
+    - ```cd whats-outside-api``
+	- (You can rename this directory to whatever makes you think '*express server*, not *react app*!')
+- Setup the Database
+  - Run the script that installs postgresql and creates the database
+    - ```./scripts/installPostgreSQL
+  - Run the script that creates the tables
+	- ```sudo -u postgres psql``` - Enter postgres cli
+	- ```\i scripts/setupDatabase.sql``` - Execute sql scripte
+	- ```\q``` - Quit postgres cli
+  - Run the script that handles the ETL process
+    - ```Python3 ./scripts/pandasETL.py
+- Before installing any dependencies, delete ```react-app``` from the working directory
+  - ```rm -rf react-app```
+- Install the dependencies for our express server
+  - ```npm install```
+- Start the express server
+  - ```npm run devStart```
+
+*Now that our express server is running, we can create another working directory for our react application.*
+- Clone the repository again, but make sure the previous directory does not have the same name as the new directory
+  - ```git clone https://github.com/tayloradam1999/whats-outside-api.git```
+  - Move into working directory
+	- ```cd whats-outside-api/react-app```
+- Install the dependencies for our react application
+  - ```npm install```
+- Start the react application
+  - ```npm start```
+- Wait for text to appear in window and press *Get Started* to continue
+
 ## Project Proposal
 - **Writeups of the design**
   - What is it you are going to build and how does it fit the theme?
@@ -32,7 +70,7 @@ There is only rule that must be followed… your application must follow the the
   - **API must also implement ONE of the following:**
     - Queueing systems
 	- [Web Sockets](https://www.youtube.com/watch?v=ZKEqqIO7n-k)
-  
+
 ## The Frontend
 - I have chosen ```React``` and ```Material UI``` for this application
   - **App-header**
@@ -45,5 +83,4 @@ There is only rule that must be followed… your application must follow the the
 	- A 2nd row of buttons indicating filters to query with
 	  - User can choose 0, 1, or many filters
 	- Output of query results
-	  - `work in progress, may output to page or console`
-
+	  - Output is in new h1 under app-body

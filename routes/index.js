@@ -23,8 +23,8 @@ const router = (app) => {
 	paths.get('/cities/:city', CitiesController.getCityByName);
 	// GET '/cities/:city/:filter'
 	paths.get('/cities/:city/:filter', CitiesController.getCityWithFilter);
-	// GET '/frontEnd_Submit'
-	paths.get('/frontEnd_Submit/', CitiesController.frontEnd_Submit);
+	// GET '/react/:city/:filter'
+	paths.get('/react/:city/:filter', CitiesController.ReactgetCityWithFilter);
 };
 
 

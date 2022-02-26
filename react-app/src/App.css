@@ -1,4 +1,4 @@
-html {
+html, p {
 	scroll-behavior: smooth;
 	font-family: 'Source Code Pro', monospace; 
 }
@@ -170,7 +170,8 @@ html {
 	font-family: 'Source Code Pro', monospace;
 	color: rgba(255,255,255,.70);
 	/* background-image: linear-gradient(to right, #fc5c7d, #6a82fb); */
-	border: 2px solid rgba(255,255,255,.70) !important;
+	border: 2px solid rgba(114, 111, 111, 0.644) !important;
+	box-shadow:rgba(27, 27, 27, 0.644) 0px 0px 0px 0.1rem;
 	border-radius: 1rem;
 	padding: 1rem 2rem;
 	height: 4.4rem !important;
@@ -186,7 +187,7 @@ html {
 	font-family: 'Source Code Pro', monospace;
 	color: rgba(255,255,255,.70);
 	background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
-	border: 2px solid rgba(255,255,255,.70) !important;
+	border: 2px solid rgba(114, 111, 111, 0.644) !important;
 	border-radius: 1rem;
 	padding: 1rem 2rem;
 	height: 4.4rem !important;
@@ -225,13 +226,16 @@ html {
 	font-family: 'Source Code Pro', monospace;
 	color: rgba(255,255,255,.70);
 	/* background-image: linear-gradient(to right, #fc5c7d, #6a82fb); */
-	border: 2px solid rgba(255,255,255,.70) !important;
+	border: 2px solid rgba(114, 111, 111, 0.644) !important;
+	box-shadow:rgba(27, 27, 27, 0.644) 0px 0px 0px 0.1rem;
 	background-color: #d3d3d3;
 	border-radius: 1rem;
 	padding: 1rem 2rem;
 	height: 4.4rem !important;
 	width: 18rem;
 	opacity: 1;
+	font-style: italic !important;
+	cursor: default;
 }
 
 .matButton5Selected, .matButton6Selected, .matButton7Selected, .matButton8Selected, .matButton9Selected {
@@ -239,7 +243,7 @@ html {
 	font-family: 'Source Code Pro', monospace;
 	color: rgba(255,255,255,.70);
 	background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
-	border: 2px solid rgba(255,255,255,.70) !important;
+	border: 2px solid rgba(114, 111, 111, 0.644) !important;
 	border-radius: 1rem;
 	padding: 1rem 2rem;
 	height: 4.4rem !important;
@@ -271,7 +275,7 @@ html {
 }
 
 .submitRow p {
-	width: 15%;
+	width: 20%;
 }
 
 .matButtonSubmit {
