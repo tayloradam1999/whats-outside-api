@@ -291,3 +291,19 @@ html, p {
 	width: 8rem !important;
 	opacity: 1;
 }
+
+.resultsRow {
+	display: flex;
+	position: relative;
+	margin-top: 2rem;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 50%;
+	min-height: 25vh;
+	opacity: 1;
+	border: 2px solid rgba(114, 111, 111, 0.644) !important;
+	box-shadow:rgba(27, 27, 27, 0.644) 0px 0px 0px 0.1rem;
+	border-radius: 1rem;
+	color: rgb(34, 34, 34);
+}

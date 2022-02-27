@@ -6,29 +6,29 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import StylesProvider from '@material-ui/styles/StylesProvider';
 
 class App extends Component {
-	// cities = []; filters = [];
 	// Currently, our makeshift frontend query is only for one city and one filter.
 	// Frontend's query is based off req.params
 	// Work on implementing a frontend query that can be used for multiple cities and filters.
-	City = ""; Filter = "";
+	City = []; Filter = [];
 
-	callSubmitButton = () => {
-		// fetch '/react/:city/:filter' with City and Filter
+	callSubmitButtonSingle = () => {
 		fetch('/react/' + this.City + '/' + this.Filter)
-		// don't turn into json, turn into text
 			.then(response => response.text())
 			.then(data => {
-				// console.log(data);
-				// add data to resultsRow
-				console.log(data);
-				let resultsRow = document.getElementsByClassName("resultsRow");
-				// add new h1 to resultsRow
-				let newH1 = document.createElement("h1");
-				newH1.innerHTML = data;
-				resultsRow[0].appendChild(newH1);
+				document.querySelector('#resultsH1').innerHTML = data;
+				document.querySelector('#resultsH2').innerHTML = "";
 			})
 			.catch(err => console.log(err));
 	}
+
+	// never got this to work, but I'm leaving it here for future reference.
+	// City and Filter can only have one value at a time.
+	callSubmitButtonMultiple = () => {
+		// sad message :(
+		document.querySelector('#resultsH1').innerHTML = "Sorry, this feature is not yet implemented.";
+		document.querySelector('#resultsH2').innerHTML = 'Please only select one city and filter at a time';
+	}
+
 
 	// if you're looking at this, i'm sorry.
 	// using react before actually learning it looks like... this.
@@ -36,83 +36,100 @@ class App extends Component {
 	selectButton1 = () => {
 		if (document.getElementById("button1").className === "matButton1Selected") {
 			document.getElementById("button1").className = "matButton1";
-			// remove string
-			this.City = ""
+			this.City = this.City.filter(city => city !== "dallas_tx");
+			console.log(this.City);
 		} else { 
 			document.getElementById("button1").className = "matButton1Selected";
-			this.City = "dallas_tx";
+			this.City.push("dallas_tx");
+			console.log(this.City);
 		}
 	}
 	selectButton2 = () => {
 		if (document.getElementById("button2").className === "matButton2Selected") {
 			document.getElementById("button2").className = "matButton2";
-			this.City = ""
+			this.City = this.City.filter(city => city !== "tulsa_ok");
+			console.log(this.City);
 		} else {
 			document.getElementById("button2").className = "matButton2Selected";
-			this.City = "tulsa_ok";
+			this.City.push("tulsa_ok");
+			console.log(this.City);
 		}
 	}
 	selectButton3 = () => {
 		if (document.getElementById("button3").className === "matButton3Selected") {
 			document.getElementById("button3").className = "matButton3";
-			this.City = ""
+			this.City = this.City.filter(city => city !== "valdez_ak");
+			console.log(this.City);
 		} else {
 			document.getElementById("button3").className = "matButton3Selected";
-			this.City = "valdez_ak";
+			this.City.push("valdez_ak");
+			console.log(this.City);
 		}
 	}
 	selectButton4 = () => {
 		if (document.getElementById("button4").className === "matButton4Selected") {
 			document.getElementById("button4").className = "matButton4";
-			this.City = ""
+			this.City = this.City.filter(city => city !== "palm_springs_ca");
+			console.log(this.City);
 		} else {
 			document.getElementById("button4").className = "matButton4Selected";
-			this.City = "palm_springs_ca";
+			this.City.push("palm_springs_ca");
+			console.log(this.City);
 		}
 	}
 	selectButton5 = () => {
 		if (document.getElementById("button5").className === "matButton5Selected") {
 			document.getElementById("button5").className = "matButton5";
-			this.Filter = "";
+			this.Filter = this.Filter.filter(filter => filter !== "nature");
+			console.log(this.Filter);
 		} else {
 			document.getElementById("button5").className = "matButton5Selected";
-			this.Filter = "nature";
+			this.Filter.push("nature");
+			console.log(this.Filter);
 		}
 	}
 	selectButton6 = () => {
 		if (document.getElementById("button6").className === "matButton6Selected") {
 			document.getElementById("button6").className = "matButton6";
-			this.Filter = "";
+			this.Filter = this.Filter.filter(filter => filter !== "parks");
+			console.log(this.Filter);
 		} else {
 			document.getElementById("button6").className = "matButton6Selected";
-			this.Filter = "parks";
+			this.Filter.push("parks");
+			console.log(this.Filter);
 		}
 	}
 	selectButton7 = () => {
 		if (document.getElementById("button7").className === "matButton7Selected") {
 			document.getElementById("button7").className = "matButton7";
-			this.Filter = "";
+			this.Filter = this.Filter.filter(filter => filter !== "museums");
+			console.log(this.Filter);
 		} else {
 			document.getElementById("button7").className = "matButton7Selected";
-			this.Filter = "museums";
+			this.Filter.push("museums");
+			console.log(this.Filter);
 		}
 	}
 	selectButton8 = () => {
 		if (document.getElementById("button8").className === "matButton8Selected") {
 			document.getElementById("button8").className = "matButton8";
-			this.Filter = "";
+			this.Filter = this.Filter.filter(filter => filter !== "landmarks");
+			console.log(this.Filter);
 		} else {
 			document.getElementById("button8").className = "matButton8Selected";
-			this.Filter = "landmarks";
+			this.Filter.push("landmarks");
+			console.log(this.Filter);
 		}
 	}
 	selectButton9 = () => {
 		if (document.getElementById("button9").className === "matButton9Selected") {
 			document.getElementById("button9").className = "matButton9";
-			this.Filter = "";
+			this.Filter = this.Filter.filter(filter => filter !== "transportation");
+			console.log(this.Filter);
 		} else {
 			document.getElementById("button9").className = "matButton9Selected";
-			this.Filter = "transportation";
+			this.Filter.push("transportation");
+			console.log(this.Filter);
 		}
 	}
 
@@ -172,9 +189,17 @@ class App extends Component {
 						</div>
 						<div class="submitRow">
 							<p>Results Per Page?</p>
-							<Button variant="text" className="matButtonSubmit" id="SubmitButton" onClick={this.callSubmitButton}>Submit</Button>
+							<Button variant="text" className="matButtonSubmit" id="SubmitButton" onClick={() => {
+								// check for all user input possibilities
+								if (this.City.length === 1 && this.Filter.length === 1) this.callSubmitButtonSingle();
+								if (this.City.length > 1 || this.Filter.length > 1) this.callSubmitButtonMultiple();
+								if (this.City.length === 0) alert('Please select a City.');
+								if (this.Filter.length === 0) alert('Please select a Filter.');
+								if (this.City.length === 0 && this.Filter.length === 0) alert('Please select a City and a Filter');
+							}}>Submit</Button>
 						</div>
-						<div class="resultsRow"></div>
+						{/* empty h1 and h2 to populate with dynamnic data, sry webpack*/}
+						<div class="resultsRow" id="result"><h1 id="resultsH1"></h1><h2 id="resultsH2"></h2></div>
 					</header>
 				</div >
 			</StylesProvider>

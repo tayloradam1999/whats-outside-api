@@ -80,4 +80,4 @@ Content-Type: application/json
   "filter": "transportation"
 }
 
-# Returns a city by name and filter via React.
+# Returns a city by name and filter via React submit button.

@@ -11,20 +11,23 @@ const router = (app) => {
 	app.use(express.json());
 	app.use('/', paths);
 
-	// GET '/users'
+	// GET '/users' - backend endpoint
 	paths.get('/users', UsersController.getUsers);
-	// POST '/users'
+	// POST '/users' - backend endpoint
 	paths.post('/users', UsersController.postNewUser);
-	// POST '/users/login'
+	// POST '/users/login' - backend endpoint
 	paths.post('/users/login', UsersController.loginUser);
-	// GET '/cities'
+	// GET '/cities' - backend endpoint
 	paths.get('/cities', CitiesController.getCities);
-	// GET '/cities/:city'
+	// GET '/cities/:city' - backend endpoint
 	paths.get('/cities/:city', CitiesController.getCityByName);
-	// GET '/cities/:city/:filter'
+	// GET '/cities/:city/:filter' - backend endpoint
 	paths.get('/cities/:city/:filter', CitiesController.getCityWithFilter);
-	// GET '/react/:city/:filter'
+	// GET '/react/:city/:filter' - front end endpoint from submit button
 	paths.get('/react/:city/:filter', CitiesController.ReactgetCityWithFilter);
+	// GET '/reactArray/:city/:filter' - this is the endpoint if the user
+	// sends cities and filters as an array of strings - no functionality
+	paths.get('/reactArray/:city/:filter', CitiesController.ReactgetCityWithFilterArray);
 };
 
 
